@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+</head>
+<body>
+    <h1>Vamos criar um link</h1>
+    <h2>Âncoras</h2>
+    <p>Para criar um hiperlink, devemos criar <strong>âncoras</strong> através da tag <em>A</em>. O principal atributo dessa tag é o <em>href</em>, que cria uma referência de hipertexto. <br> Note que dentro do atributo <em>href</em> colocamos uma <strong>URL</strong> completa para outro site: </p>
+    <a href="https://gustavoguanabara.github.io">Acesse meu perfil GitHub</a>
+
+    <p>Outro atributo bem útil da tag de âncora é op <em>hreflang</em>, que permite indicar qual é o idioma principal do site para onde o link está desviando o <br> fluxo de navegação. Isso vai permitir avisar ao navegador e a softwares de tradução como lidar caso o visitante opte por traduzir automaticamente os conteúdos.</p>
+
+    <a href="https://www.w3schools.com/html/" hreflang="en">Site da W3Schools (em Inglês)</a>
+
+    <h2>Target</h2>
+
+    <p>Por padrão, sempre que um visitante clique em um hiperlink, o site de destino abre na mesma janela do site que continha esse link. <br> Ou seja, o conteúdo anterior vai deixar de ser exibido para mostrar o novo conteúdo. </p>
+    <p>Para poder controlar onde o site de destino vai abrir, podemos usar o atributo <em>target</em>, que suporta os seguntes valores:</p>
+
+    <dl>
+        <dt><strong>_blank</strong></dt>
+        <dd>Vai abrir o link em uma nova janela em branco.</dd>
+        <dt><strong>_self</strong></dt>
+        <dd>Vai abrir o link na janela ou frame atual (padrão).</dd>
+        <dt><strong>_top</strong></dt>
+        <dd>vai desfazer todos os frames e abrir o destino no navegador completo.</dd>
+        <dt><strong>_parent</strong></dt>
+        <dd>Similar ao uso do <em>_top</em> em uma referência à janela mãe.</dd>
+        <dt><strong>nome-do-frame</strong></dt>
+        <dd>caso esteja usando frames, indicar o nome da janela a abrir.</dd>
+    </dl>
+    <p>Como o uso de frames é uma técnica quase em desuso, vamos nos  basear nas duas primeiras opções: <em>_blank</em> e <em>_self</em>.</p>
+
+<h3>_self</h3>
+    <a href="pagina2.html" target="_self">Continuar navegando no site</a>
+
+    <br>
+<h3>_blank</h3>
+    <a href="https://gustavoguanabara.github.com" target="_blank">Abrir perfil GitHub em nova janela.</a>
+
+    <h2>Atributo <em>rel</em></h2>
+
+    <p>Existe um recurso bem interessante para links que é indicar qual é a natureza do destino usando o atributo rel. Esse atributo aceita vários valores, entreles vou citar:
+    </p>
+
+    <dl>
+        <dt><strong>next</strong></dt>
+        <dd>indica que o link é para a próxima parte do documento atual.</dd>
+        <dt><strong>prev</strong></dt>
+        <dd>indica que o link é para a parte anterior do documento atual.</dd>
+        <dt><strong>author</strong></dt>
+        <dd>indica que é um link para o site do autor do artigo atual.</dd>
+        <dt><strong>external</strong></dt>
+        <dd>indica que é um link para outro site que não faz parte do site.</dd>
+        <dt><strong>nofollow</strong></dt>
+        <dd>indica que é um link para um site não endossado, como um link pago.</dd>
+    </dl>
+<h3>Next</h3>
+<p>O primeiro link é o que chamamos de <strong>link local</strong> ou <strong>link interno</strong>, já que ele leva o visitante a outra página dentro do nosso próprio site. <br> Note que não é necessário nem indicar a URL completa nesses casos: </p>
+    <a href="pagina2.html" target="_self" rel="next">Continuar navegando no site</a>
+
+   <h3>External</h3>
+<p>o segundo link vai nos levar para outro site, o que chamamos de <strong>link externo</strong>. <br> Neste casos, devemos indicar a URL completa, incluíndo o protocolo <em>http://</em> ou <em>https://</em> e o caminho que leve à uma página específica, se for necessário.</p>
+    <a href="https://gustavoguanabara.github.com" target="_blank" rel="external">Abrir perfil GitHub em nova janela.</a>
+    
+    <h2>Links para Download</h2>
+
+    <p>Outra coisas que aparece bastante em dites são os links para efetuar download de algum material em PDF ou de um arquivo ZIP qualquer. <br> A partir da versão HTML5 as âncoras receberam atributos especiais para isso. <br> Basta fazer o link diretamente para o arquivo que deseja efetuar o download e adicionar o atributo <em>download</em> com o valor configurado para <br> o nome do arquivo a ser baixado e o atributo <em>type</em> para indicar ao navegador que o tipo de arquivo está sendo baixado. <br> Vamos ver um exemplo: </p>
+
+    <a href="arquivos/meulivro.pdf" download="meulivro.pdf" type="application/pdf">Baixe aqui o PDF do meu livro</a>
+
+    <h3><em>media types</em></h3>
+
+    <ul>
+        <li>appliccation/zip</li>
+        <li>text/html</li>
+        <li>text/css</li>
+        <li>text/javascript</li>
+        <li>video/mp4</li>
+        <li>video/h264</li>
+        <li>video/jpeg</li>
+        <li>audio/aac</li>
+        <li>audio/mpeg</li>
+        <li>font/ttf</li>
+        <li>image/jpeg</li>
+        <li>image/png</li>
+    </ul>
+
+    <p>Se quiser saber o que escrever dentro do atributo <em>type</em> de uma âncora de hypertext, consulte a lista ofocoal da IANA.org disponível <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="blank" rel="external">aqui</a></p>
+
+    
+</body>
+</html>
