@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela - Desafio 2</title>
+    <!-- Este exercício consiste em criar uma tabela HTML com células mescladas.
+    A tabela deve conter os seguintes valores:
+    A, B, C, D, E, F, G, H, I, J, L, M, N.
+    As células devem ser mescladas conforme a seguinte estrutura:
+    +---+---+---+---+---+
+    | A | A | A | A | B |
+    +---+---+---+---+---+
+    | C | D | E | F | B |
+    +---+---+---+---+---+
+    | C | G | H | I | B |
+    +---+---+---+---+---+
+    | C | J | L | M | B |
+    +---+---+---+---+---+
+    | c | N | N | N | N |
+    -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mesclagem de células - Desafio 2</h1>
+    <table>
+        <tr>
+            <td colspan="4">A</td>
+            <td rowspan="4">B</td>
+        </tr>
+        <tr>
+            <td rowspan="4">C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+            
+        </tr>
+        <tr>
+            
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+            
+        </tr>
+        <tr>
+            
+            <td>J</td>
+            <td>L</td>
+            <td>M</td>
+            
+        </tr>
+        <tr>
+            
+            <td colspan="4">N</td>
+            
+        </tr>
+    </table>
+    
+</body>
+</html>

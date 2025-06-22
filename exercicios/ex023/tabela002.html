@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 002</title>
+    
+    <!--
+Para fixar o cabeçalho da tabela durante a rolagem, utilize:
+
+- No seletor thead > tr > th:
+    - position: sticky;  // Faz o cabeçalho "grudar" no topo ao rolar a tabela
+    - top: 0;            // Define a distância do topo (ajuste conforme necessário)// na tabela abaixo foi usado -1px colar totalmente no topo.
+    - background-color: #ccc; // Garante que o cabeçalho fique visível sobre o conteúdo
+
+- Em table:
+    - position: relative; // Garante que o sticky funcione em relação à tabela
+
+Obs: A propriedade position: sticky; é compatível com a maioria dos navegadores modernos.
+--    
+    -->
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            position:relative;
+        }
+        caption{
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            background-color: lightgray;
+        }
+
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: #ccc;
+        }
+        thead{
+            background-color: #ccc;
+        }
+
+        td, th{
+            
+            border: 1px solid black;
+            padding: 10px;
+        }
+        tbody > tr:nth-child(odd){
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de Tabelas Grandes</h1>
+    <!-- Anatomia para Tabelas Grandes
+     Table
+        Caption
+        Thead
+            tr, td, th
+        Tbody
+            tr, td, th
+        Tfoot
+            tr, td, th
+    -->
+        <table>
+            <caption>População dos Estados Brasileiros</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Estado</th>
+                    <th scope="col">População</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>São Paulo</td>
+                    <td>45.000.000</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td>21.000.000</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td>17.000.000</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td>15.000.000</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td>11.000.000</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Sul</td>
+                    <td>11.000.000</td>
+                </tr>
+                <tr>
+                    <td>Pernambuco</td>
+                    <td>9.000.000</td>
+                </tr>
+                <tr>
+                    <td>Ceará</td>
+                    <td>9.000.000</td>
+                </tr>
+                <tr>
+                    <td>Pará</td>
+                    <td>8.000.000</td>
+                </tr>
+                <tr>
+                    <td>Santa Catarina</td>
+                    <td>7.000.000</td>
+                </tr>
+                <tr>
+                    <td>Goiás</td>
+                    <td>7.000.000</td>
+                </tr>
+                <tr>
+                    <td>Maranhão</td>
+                    <td>7.000.000</td>
+                </tr>
+                <tr>
+                    <td>Alagoas</td>
+                    <td>3.000.000</td>  
+                </tr>
+                <tr>
+                    <td>Paraíba</td>
+                    <td>4.000.000</td> 
+                </tr>
+                <tr>
+                    <td>Espírito Santo</td>
+                    <td>4.000.000</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Norte</td>
+                    <td>3.000.000</td>
+                </tr>
+                <tr>
+                    <td>Distrito Federal</td>
+                    <td>3.000.000</td>
+                </tr>
+                <tr>
+                    <td>Sergipe</td>
+                    <td>2.000.000</td>
+                </tr>
+                <tr>
+                    <td>Tocantins</td>
+                    <td>1.500.000</td>
+                </tr>
+                <tr>
+                    <td>Acre</td>
+                    <td>900.000</td>   
+                </tr>
+                <tr>
+                    <td>Amapá</td>
+                    <td>800.000</td>
+                </tr>
+                <tr>
+                    <td>Rondônia</td>
+                    <td>1.500.000</td>
+                </tr>
+                <tr>
+                    <td>Roraima</td>
+                    <td>600.000</td>
+                </tr>
+                <tr>
+                    <td>Amazonas</td>
+                    <td>4.000.000</td>
+                </tr>
+                <tr>
+                    <td>Pará</td>
+                    <td>8.000.000</td>
+                </tr>
+                <tr>
+                    <td>Piauí</td>
+                    <td>3.000.000</td>
+                </tr>
+                <tr>
+                    <td>Matogrosso</td>
+                    <td>3.000.000</td>
+                </tr>
+                <tr>
+            </tbody>
+            <tfoot>
+                <th scope="row">Total de habitantes</th>
+                <td>250.000.000</td>
+            </tfoot>
+        </table>
+</body>
+</html>
