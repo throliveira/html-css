@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Tabela</title>
+    <!-- 
+    Este exercício demonstra o uso de tabelas HTML com colgroup e col para estilização de colunas.
+    A tabela contém informações fictícias de cadastro, incluindo nome, sexo, idade e profissão.
+    As colunas são estilizadas com cores diferentes para destacar o nome.
+    O uso de colgroup e col permite aplicar estilos específicos a colunas inteiras, facilitando a manutenção do código.
+    A tabela é responsiva e se adapta a diferentes tamanhos de tela, mantendo a legibilidade e a organização dos dados.
+    Além disso é possível utilizar o atributo span para afetar mais de uma coluna.
+    <colgroup>
+        <col span="2"> - aplica o estilo a duas colunas
+        <col>
+        <col>
+        <col>
+    </colgroup>
+    -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        /* tr:nth-child(even) {
+            background-color: #f2f2f2;
+        } */
+        col.cnome{
+            background-color: #09ea10;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exercício de tabela</h1>
+    <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cprof">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana maioria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>João Silva</td>
+            <td>M</td>
+            <td>30</td>
+            <td>Engenheiro</td>
+        </tr>
+        <tr>
+            <td>Maria Oliveira</td>
+            <td>F</td>
+            <td>28</td>
+            <td>Designer</td>
+        </tr>
+        <tr>
+            <td>Carlos Souza</td>
+            <td>M</td>
+            <td>35</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Fernanda Lima</td>
+            <td>F</td>
+            <td>22</td>
+            <td>Estudante</td>
+        </tr>
+        <tr>
+            <td>Roberto Costa</td>
+            <td>M</td>
+            <td>40</td>
+            <td>Administrador</td>
+        </tr>
+        <tr>
+            <td>Luciana Martins</td>
+            <td>F</td>
+            <td>31</td>
+            <td>Arquiteta</td>
+        </tr>
+        <tr>
+            <td>Paulo Pereira</td>
+            <td>M</td>
+            <td>29</td>
+            <td>Programador</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
